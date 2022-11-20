@@ -1,0 +1,121 @@
+:root{
+    --bgcolor:brown;
+    --fcolor:;
+    --white:white;
+
+}
+
+
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    background-color:var(--bgcolor);
+    font-family: Helvetica, sans-serif;
+}
+
+header{
+    font-size: larger;
+}
+
+header,
+form{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--white) ;
+}
+
+form button{
+    cursor: pointer;
+}
+
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+    color: brown;
+}
+
+.todo{
+    margin: 00.5rem;
+    background:var(--white);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+ 
+.todo li{
+    flex: 1;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: var(--bgcolor);
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.6rem;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background:var(--bgcolor) ;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+
