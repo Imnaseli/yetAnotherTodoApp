@@ -1,6 +1,6 @@
 :root{
     --bgcolor:brown;
-    --fcolor:;
+    --fcolor:white;
     --white:white;
 
 }
@@ -27,6 +27,7 @@ header{
 
 header,
 form{
+    margin: 1rem;
     min-height: 10vh;
     display: flex;
     justify-content: center;
@@ -57,12 +58,12 @@ form button{
 }
 
 .todo-list{
-    min-width: 30%;
+    min-width: 50%;
 }
 
 .todo-item{
     padding: 0rem 0.5rem;
-    color: brown;
+    color: var(--bgcolor);
 }
 
 .todo{
@@ -106,7 +107,7 @@ select{
     color: var(--bgcolor);
     width: 10rem;
     cursor: pointer;
-    padding: 0.6rem;
+    padding: 0.4rem;
 }
 
 .select::after{
