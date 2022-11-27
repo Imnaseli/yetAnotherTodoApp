@@ -8,11 +8,14 @@ const todolist = document.querySelector(".todo-list")
 todobtn.addEventListener("click", addtodo)
 filteropt.addEventListener("click" , filtertodo)
 
+
 //Functions
 function addtodo(e){
     e.preventDefault()
     addnewtodo()
     clearinput()
+
+    //
 }
 
 function trashtodo(e){
@@ -69,7 +72,28 @@ function addnewtodo(){
     trash.addEventListener('click' , trashtodo)
 }
 
+
 function filtertodo(e){
     let todo = todolist.childNodes
-    console.log(todo)
+    todo.forEach(function(todo){
+        switch(e.target.value){
+            case "all":
+                todo.style.display = "flex"
+                break
+            case "completed":
+                if(todo.classList.contains("completed")){
+                    todo.style.display = "flex";
+                }else{
+                    todo.style.display = "none";
+                };
+                break
+            case "uncompleted":
+                if(todo.classList.contains("completed")){
+                    todo.style.display = "none";
+                }else{
+                    todo.style.display = "flex";
+                }
+                break
+        }
+    })
 }
